@@ -9,7 +9,7 @@
         {{$settings['company_name']}}
     </title>
 
-    <link id="pagestyle" href="/public/css/app.css?v=53" rel="stylesheet" />
+    <link id="stylesheet" href="{{ asset('css/app.css')}}" rel="stylesheet" />
 
 @yield('head')
 
@@ -349,8 +349,8 @@
 
 </div>
 <!--   Core JS Files   -->
-<script src="/public/js/app.js?v=53"></script>
-<script src="/public/lib/tinymce/tinymce.min.js?v=50"></script>
+<script src="{{asset('js/app.js?v=53')}}"></script>
+<script src="{{asset('/lib/tinymce/tinymce.min.js?v=50')}}"></script>
 
 <script>
     "use strict"

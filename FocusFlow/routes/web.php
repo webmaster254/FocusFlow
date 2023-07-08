@@ -101,3 +101,7 @@ Route::post('/save-event', [PlansController::class,'eventPost']);
 Route::post('/user-post', [ProfileController::class,'userPost']);
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
