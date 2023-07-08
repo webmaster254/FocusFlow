@@ -4,6 +4,12 @@ use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
+const PUBLIC_DIR = '/public';
+
+
+// if (!file_exists(__DIR__.'.env')) {
+//     require __DIR__.'/app/Supports/installer_init.php';
+// }
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +22,8 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
-    require $maintenance;
+if (file_exists(__DIR__.'/storage/framework/maintenance.php')) {
+    require __DIR__.'/storage/framework/maintenance.php';
 }
 
 /*
@@ -31,7 +37,7 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -44,12 +50,12 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/../bootstrap/app.php';
+$app = require_once __DIR__.'/bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 
-$response = $kernel->handle(
+$response = tap($kernel->handle(
     $request = Request::capture()
-)->send();
+))->send();
 
 $kernel->terminate($request, $response);
