@@ -4,6 +4,11 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ @import '~@fortawesome/fontawesome-free/css/fontawesome';
+@import '~@fortawesome/fontawesome-free/css/regular';
+@import '~@fortawesome/fontawesome-free/css/solid';
+@import '~@fortawesome/fontawesome-free/css/brands';
 :root {
   --bs-blue: #63B3ED;
   --bs-indigo: #596CFF;
@@ -30,6 +35,7 @@
   --bs-font-sans-serif: Open Sans;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-main-font:'Josefin Sans', sans-serif;
 }
 
 *,
@@ -46,12 +52,12 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-font-sans-serif);
+  font-family: var(--bs-main-font);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #67748e;
-  background-color: #fff;
+  background-color: #928686;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -13266,13 +13272,13 @@ fieldset:disabled .btn {
 
 .btn-dark:hover,
 .btn.bg-gradient-dark:hover {
-  background-color: #252f40;
+  background-color: #129aba;
   border-color: #252f40;
 }
 
 .btn-dark .btn.bg-outline-dark,
 .btn.bg-gradient-dark .btn.bg-outline-dark {
-  border: 1px solid #252f40;
+  border: 1px solid #2152FF;
 }
 
 .btn-dark:not(:disabled):not(.disabled).active,
@@ -20054,7 +20060,7 @@ p {
 }
 
 .bg-gray-100 {
-  background-color: #f8f9fa !important;
+  background-color: #adb5bd !important;
 }
 
 .bg-gray-200 {

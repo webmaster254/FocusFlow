@@ -45,7 +45,7 @@
             <div class="col-xl-5 ms-auto mt-xl-0 mt-4">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card bg-gradient-dark">
+                        <div class="card bg-gradient-dark ">
                             <div class="card-body p-3">
                                 <div class="row">
                                     <div class="numbers">
