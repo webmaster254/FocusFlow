@@ -10,7 +10,7 @@
 @import '~@fortawesome/fontawesome-free/css/solid';
 @import '~@fortawesome/fontawesome-free/css/brands';
 :root {
-  --bs-blue: #63B3ED;
+  --bs-blue: #2f2fdd;
   --bs-indigo: #596CFF;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -56,8 +56,8 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #67748e;
-  background-color: #928686;
+  color: #3f3a3a;
+  background-color: #1a1818;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -4457,7 +4457,7 @@ fieldset:disabled .btn {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #cb0c9f;
+  color: #3174fa;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
@@ -4469,7 +4469,7 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #830866;
+  color: #3174fa;
 }
 
 .nav-link.disabled {
@@ -8502,7 +8502,12 @@ fieldset:disabled .btn {
 .text-white {
   color: #fff !important;
 }
-
+.text-green{
+  color:#97f64d;
+}
+.text-blue{
+  color:#3174fa;
+}
 .text-body {
   color: #67748e !important;
 }
@@ -8557,6 +8562,15 @@ fieldset:disabled .btn {
 
 .bg-white {
   background-color: #fff !important;
+}
+.bg-blue{
+  background-color: #3174fa;
+}
+.bg-red{
+  background-color: #f54f4c;
+}
+.bg-green{
+  background-color:#97f64d;
 }
 
 .bg-body {
@@ -14176,6 +14190,9 @@ label,
 
 .bg-gradient-dark {
   background-image: linear-gradient(310deg, #141727 0%, #3A416F 100%);
+}
+.bg-blue{
+  background-color: var(--bs-blue);
 }
 
 .bg-gradient-faded-primary {
@@ -20088,11 +20105,11 @@ p {
 }
 
 .bg-gray-800 {
-  background-color: #343a40 !important;
+  background-color: #181F25 !important;
 }
 
 .bg-gray-900 {
-  background-color: #212529 !important;
+  background-color: #10151a !important;
 }
 
 .letter-spacing-1 {
@@ -20950,7 +20967,9 @@ p {
     transition: all .1s ease 0s;
   }
 }
-
+.sidenav{
+  background-color: #212731;
+}
 .sidenav[data-color="primary"] .navbar-nav>.nav-item>.nav-link.active .icon {
   background-image: linear-gradient(310deg, #cb0c9f 0%, #cb0c9f 100%);
 }
