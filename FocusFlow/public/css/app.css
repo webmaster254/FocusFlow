@@ -7799,12 +7799,12 @@ sup {
 }
 
 a {
-  color: #cb0c9f;
+  color: #faf4f9;
   text-decoration: none;
 }
 
 a:hover {
-  color: #830866;
+  color: #0bd415;
   text-decoration: none;
 }
 
@@ -7922,6 +7922,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+ 
 }
 
 button,
@@ -16075,7 +16076,8 @@ fieldset:disabled .btn {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #fff !important;
+  opacity: 0.7 ;
 }
 
 .text-black-50 {
@@ -16133,6 +16135,7 @@ fieldset:disabled .btn {
 }
 .bg-green{
   background-color:#97f64d;
+  color:#000;
 }
 
 .bg-body {

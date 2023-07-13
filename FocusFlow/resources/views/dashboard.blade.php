@@ -156,7 +156,7 @@
                                     @endif</span>
                             </td>
                             <td>
-                                <a class="btn btn-link text-dark float-end px-3 mb-0" href="/view-project?id={{$project->id}}"><i class="fas fa-file-alt text-dark me-2" aria-hidden="true"></i>{{__('View')}}</a>
+                                <a class="btn btn-link text-white float-end px-3 mb-0" href="/view-project?id={{$project->id}}"><i class="fas fa-file-alt text-green me-2" aria-hidden="true"></i>{{__('View')}}</a>
 
                             </td>
 
@@ -242,10 +242,10 @@
                                         @foreach($goals as $goal)
                                             <tr>
                                                 <td>
-                                                    <div class="text-white d-flex px-2 py-1">
+                                                    <div class=" d-flex px-2 py-1">
 
-                                                        <div class="d-flex text-white flex-column justify-content-center">
-                                                            <h6 class="text-green mb-0 text-sm"><a href="/set-goal?id={{$goal->id}}">{{$goal->name}}</a></h6>
+                                                        <div class="d-flex  flex-column justify-content-center">
+                                                            <h6 class=" mb-0 text-sm"><a href="/set-goal?id={{$goal->id}} " ><span class="text-white opacity-7">{{$goal->name}}</span></a></h6>
 
                                                         </div>
                                                     </div>

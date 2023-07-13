@@ -7,17 +7,17 @@
     <div class="container-fluid py-4">
         <div class="row">
             <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h6 class="mb-2">
+                <div class="card bg-gray-800">
+                    <div class="card-header bg-gray-800">
+                        <h6 class="mb-2 text-white">
                             {{__('My Daily Journals')}}
                         </h6>
                         <span>
 </span>
-                        <p class="mb-0 text-sm">
+                        <p class="mb-0 text-sm text-white opacity-7">
                             {{__('Free your mind from the noise of thousands of thoughts and set your intention for the day. This practice has proven to be the most effective in terms of productivity and mental peace.')}}
                         </p>
-                        <a  href="/add-five-min-journal" type="button" class="btn bg-gradient-dark mt-4">{{__('New Five Minute Journal')}}</a>
+                        <a  href="/add-five-min-journal" type="button" class="btn bg-green text-dark mt-4">{{__('New Five Minute Journal')}}</a>
 
                     </div>
 
