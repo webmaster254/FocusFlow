@@ -3,8 +3,8 @@
 
 @section('content')
 
-    <div class="card">
-        <div class="card-header">
+    <div class="card bg-gray-800">
+        <div class="card-header bg-gray-800 text-white">
             {{__('Set Your Goal')}}
 
         </div>
@@ -21,18 +21,18 @@
                     </div>
                 @endif
                 <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">
+                    <label for="example-text-input" class="form-control-label text-white opacity-7">
                        {{__('Whats your Goal/ Title')}}
                     </label><span class="text-danger">*</span>
-                    <input class="form-control"  type="text" name="name" @if (!empty($goal)) value="{{$goal->name}}" @endif id="name" >
+                    <input class="form-control bg-gray-700 text-white "  type="text" name="name" @if (!empty($goal)) value="{{$goal->name}}" @endif id="name" >
                 </div>
 
                 <div class="form-group">
-                    <label for="example-date-input" class="form-control-label">
+                    <label for="example-date-input" class="form-control-label  text-white ">
                         {{__('By when you want to achieve it')}}
 
                     </label><span class="text-danger">*</span>
-                    <input class="form-control" name="date" id="date"
+                    <input class="form-control  bg-gray-700 text-white " name="date" id="date"
 
                            @if(!empty($goal))
                         value="{{$goal->date}}"
@@ -41,7 +41,7 @@
                         @endif>
                 </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1">
+                        <label for="exampleFormControlTextarea1" class=" text-white ">
                            {{__('Describe why its your goal')}}
                         </label>
                         <span class="text-danger">*</span>
@@ -57,10 +57,10 @@
                         {{__('Save')}}
 
                     </button>
-                <button type="button" class="btn bg-gradient-secondary">
+                <a href="/goals" type="button" class="btn bg-gradient-secondary">
                     {{__('Close')}}
 
-                </button>
+</a>
             </form>
 
 
@@ -101,6 +101,9 @@
 
 
             plugins: 'table,code',
+            skin: 'oxide-dark',
+            content_css : 'dark'
+            
 
 
         });

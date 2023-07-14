@@ -20,7 +20,7 @@
                     {{__('— The science of getting rich')}}
                 </p>
                 </div>
-            <a  href="/set-goal" type="button" class="btn btn-outline-light">
+            <a  href="/set-goal" type="button" class="btn btn-outline-light bg-green">
                 {{__('Set your goals')}}
 
             </a>
@@ -30,22 +30,22 @@
         </div>
 
 
-    <div class="row">
-        <div class="col-12">
-            <div class="card mb-4">
-                <div class="card-header pb-0">
-                    <h6>{{__('Goals')}}</h6>
+    <div class="row ">
+        <div class="col-12 ">
+            <div class="card mb-4 bg-gray-800">
+                <div class="card-header pb-0 bg-gray-800">
+                    <h6 class="text-white">{{__('Goals')}}</h6>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
                     <div class="table-responsive p-0">
                         <table class="table align-items-center mb-0">
                             <thead>
                             <tr>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">{{__('Name')}}</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                <th class="text-uppercase text-white text-xxs font-weight-bolder opacity-7">{{__('Name')}}</th>
+                                <th class="text-uppercase text-white text-xxs font-weight-bolder opacity-7 ps-2">
                                     {{__('Estimate Date to finish')}}
                                 </th>
-                                <th class="text-center float-end text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                <th class="text-center float-end text-uppercase text-white text-xxs font-weight-bolder opacity-7">
                                     {{__('Completed?')}}
 
                                 </th>
@@ -60,14 +60,14 @@
                                         <div class="d-flex px-2 py-1">
 
                                             <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="mb-0 text-sm">{{$goal->name}}</h6>
+                                                <h6 class="mb-0 text-sm text-white opacity-7">{{$goal->name}}</h6>
 
                                             </div>
                                         </div>
                                     </td>
                                     <td>
 
-                                        <span class="text-xs font-weight-bold">{{$goal->date->format(config('app.date_format'))}}</span>
+                                        <span class="text-xs font-weight-bold text-white opacity-7">{{$goal->date->format(config('app.date_format'))}}</span>
 
                                     </td>
 
@@ -85,8 +85,8 @@
 
                                     <td class="">
                                         <div class="ms-auto text-end">
-                                            <a class="btn btn-link text-dark px-3 mb-0" href="/view-goal?id={{$goal->id}}"><i class="fas fa-file-alt text-dark me-2" aria-hidden="true"></i>{{__('View')}}</a>
-                                            <a class="btn btn-link text-dark px-3 mb-0" href="/set-goal?id={{$goal->id}}"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>{{__('Edit')}}</a>
+                                            <a class="btn btn-link text-white px-3 mb-0" href="/view-goal?id={{$goal->id}}"><i class="fas fa-file-alt text-white me-2" aria-hidden="true"></i>{{__('View')}}</a>
+                                            <a class="btn btn-link text-white px-3 mb-0" href="/set-goal?id={{$goal->id}}"><i class="fas fa-pencil-alt text-white me-2" aria-hidden="true"></i>{{__('Edit')}}</a>
 
                                             <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="/delete/goal/{{$goal->id}}"><i class="far fa-trash-alt me-2"></i>{{__('Delete')}}</a>
 
