@@ -20,15 +20,15 @@
 <body class="g-sidenav-show   bg-gray-900">
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-left ms-3" id="sidenav-main">
     <div class="sidenav-header">
-        <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute right-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+        <i class="fas fa-times p-3 cursor-pointer text-primary opacity-5 position-absolute right-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0" href="{{config('app.url')}}/dashboard">
             @if(!empty($settings['logo']))
-                <img src="{{PUBLIC_DIR}}/storage/{{$settings['logo']}}" class="navbar-brand-img h-100" alt="...">
+                <img src="/storage/{{$settings['logo']}}" class="navbar-brand-img h-100" alt="...">
             @endif
             <span class="text-green ms-1 font-weight-bold"> {{$settings['company_name']}}</span>
         </a>
     </div>
-    <hr class="horizontal white mt-0">
+    <hr class="horizontal light mt-0">
 
     <div class="collapse navbar-collapse  w-auto" id="sidenav-collapse-main">
 
@@ -44,7 +44,7 @@
                         </svg> -->
                         <i class="fas fa-home"></i>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{ __('Dashboard') }}</span>
+                    <span class=" nav-link-text ms-1">{{ __('Dashboard') }}</span>
                 </a>
 
 
@@ -61,7 +61,7 @@
                         </svg> -->
                         <i class="fas fa-book-reader"></i>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('5 Minute Journals')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('5 Minute Journals')}}</span>
                 </a>
             </li>
             <li class="nav-item mt-3">
@@ -79,10 +79,10 @@
                             <path class="color-background" d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Goals')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('Goals')}}</span>
                 </a>
             </li>
-            <li class="nav-item" >
+            <!-- <li class="nav-item" >
                 <a class="nav-link @if(($selected_navigation ?? '') === 'vision-board') active @endif" href="/vision-board">
                     <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
 
@@ -90,9 +90,9 @@
                             <path  class="color-background" d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Vision Board')}} </span>
+                    <span class=" nav-link-text ms-1">{{__('Vision Board')}} </span>
                 </a>
-            </li>
+            </li> -->
             <li class="nav-item mt-3">
                 <h6 class="text-green ps-4 ms-2 text-uppercase text-xs font-weight-bolder ">{{__('Plans')}}</h6>
             </li>
@@ -104,7 +104,7 @@
                             <path class="color-background" d="M2 1.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1-.5-.5zm2.5.5v1a3.5 3.5 0 0 0 1.989 3.158c.533.256 1.011.791 1.011 1.491v.702s.18.149.5.149.5-.15.5-.15v-.7c0-.701.478-1.236 1.011-1.492A3.5 3.5 0 0 0 11.5 3V2h-7z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Plans')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('Plans')}}</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -115,7 +115,7 @@
                             <path class="color-background" d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Weekly Plans')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('Weekly Plans')}}</span>
                 </a>
             </li>
             <li class="nav-item" >
@@ -125,7 +125,7 @@
                             <path  class="color-background" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Calendar')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('Calendar')}}</span>
                 </a>
             </li>
             <li class="nav-item mt-3">
@@ -139,7 +139,7 @@
                             <path class="color-background" d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Business Plans')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('Business Plans')}}</span>
                 </a>
             </li>
 
@@ -155,7 +155,7 @@
                             <path class="color-background" d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Projects')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('Projects')}}</span>
                 </a>
             </li>
 
@@ -180,7 +180,7 @@
                             <path class="color-background" d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zM2 1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm0 8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H2zm.854-3.646a.5.5 0 0 1-.708 0l-1-1a.5.5 0 1 1 .708-.708l.646.647 1.646-1.647a.5.5 0 1 1 .708.708l-2 2zm0 8a.5.5 0 0 1-.708 0l-1-1a.5.5 0 0 1 .708-.708l.646.647 1.646-1.647a.5.5 0 0 1 .708.708l-2 2zM7 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('To-dos')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('To-dos')}}</span>
                 </a>
             </li>
             <li class="nav-item ">
@@ -191,7 +191,7 @@
                             <path class="color-background" d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('To-Learns')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('To-Learns')}}</span>
                 </a>
             </li>
 
@@ -206,7 +206,7 @@
                             <path class="color-background" d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Notes')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('Notes')}}</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -227,7 +227,7 @@
                             </g>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Documents')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('Documents')}}</span>
                 </a>
             </li>
 
@@ -246,7 +246,7 @@
                             <path class="color-background" d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3zM7 5.5a1 1 0 0 0-1 1V13a.5.5 0 0 0 1 0v-2h1.188a2.75 2.75 0 0 0 0-5.5H7z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Profile')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('Profile')}}</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -258,7 +258,7 @@
                             <path class="color-background" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Users')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('Users')}}</span>
                 </a>
             </li>
 
@@ -292,7 +292,7 @@
                             </g>
                         </svg>
                     </div>
-                    <span class="text-white nav-link-text ms-1">{{__('Settings')}}</span>
+                    <span class=" nav-link-text ms-1">{{__('Settings')}}</span>
                 </a>
             </li>
 

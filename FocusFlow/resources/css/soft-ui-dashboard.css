@@ -4470,7 +4470,7 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #3174fa;
+  color: #0d0d0e;
 }
 
 .nav-link.disabled {
@@ -4505,8 +4505,8 @@ fieldset:disabled .btn {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
-  background-color: #fff;
+  color: #1bdd0a;
+  background-color: #f0f7f1;
   border-color: #dee2e6 #dee2e6 #fff;
 }
 
@@ -4524,8 +4524,8 @@ fieldset:disabled .btn {
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-  color: #252f40;
-  background-color: #fff;
+  color: #0a0a0a;
+  background-color: #f1f7f1;
 }
 
 .nav-fill>.nav-link,
@@ -4860,7 +4860,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #252f40;
+  color: #e4e9f1;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -21078,6 +21078,7 @@ p {
   transition: 0.3s ease;
   opacity: 1;
 }
+
 
 @media (max-width: 1199.98px) {
   .g-sidenav-show.rtl .sidenav {

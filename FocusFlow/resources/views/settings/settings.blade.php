@@ -5,13 +5,13 @@
     <div class="container-fluid my-3 py-3">
         <div class="row mb-5">
             <div class="col-lg-3">
-                <div class="card position-sticky top-1">
-                    <ul class="nav flex-column bg-white border-radius-lg p-3">
+                <div class="card bg-gray-800 position-sticky top-1">
+                    <ul class="nav flex-column bg-gray-800 border-radius-lg p-3">
 
                         <li class="nav-item pt-2">
-                            <a class="nav-link text-body" data-scroll="" href="#basic-info">
+                            <a class="nav-link text-body bg-gray-800" data-scroll="" href="#basic-info">
                                 <div class="icon me-2">
-                                    <svg class="text-dark mb-1" width="16px" height="16px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <svg class="text-white mb-1" width="16px" height="16px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <g transform="translate(-1870.000000, -591.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -25,7 +25,7 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <span class="text-sm">{{__('General Settings')}}</span>
+                                <span class="text-sm text-white">{{__('General Settings')}}</span>
                             </a>
                         </li>
 
@@ -58,17 +58,17 @@
                         </div>
                     @endif
 
-                    <div class="card mt-4" id="basic-info">
-                        <div class="card-header">
-                            <h5>{{__('General Settings')}}</h5>
+                    <div class="card bg-gray-800 mt-4" id="basic-info">
+                        <div class="card-header bg-gray-800">
+                            <h5 class="text-green">{{__('General Settings')}}</h5>
                         </div>
                         <div class="card-body pt-0">
                             <div class="row">
-                                <label class="form-label">{{__('WorkSpace Name')}}</label>
-                                <p class="text-sm">
+                                <label class="form-label text-white">{{__('WorkSpace Name')}}</label>
+                                <p class="text-sm text-white opacity">
                                     {{__('Give a workspace name to show on the naviagtion. For example,')}} {{$user->first_name}}'{{__('s Desk')}}</p>
                                 <div class="input-group">
-                                    <input id="firstName" name="company_name" value="{{$settings['company_name']}}" class="form-control" type="text" required="required">
+                                    <input id="firstName" name="company_name" value="{{$settings['company_name']}}" class="form-control bg-gray-700 text-white" type="text" required="required">
                                 </div>
 
                             </div>
@@ -79,14 +79,14 @@
 
                                 <div class="col-md-12 align-self-center">
                                     <div>
-                                        <label  for="logo_file" class="form-label mt-4">{{__('Upload Logo')}}</label>
-                                        <input class="form-control" name="logo" type="file" id="logo_file">
+                                        <label  for="logo_file" class="form-label mt-4 text-white">{{__('Upload Logo')}}</label>
+                                        <input class="form-control bg-gray-700 text-white" name="logo" type="file" id="logo_file">
                                     </div>
                                 </div>
 
                             </div>
                             @csrf
-                            <button class="btn bg-gradient-dark btn-sm float-left mt-4 mb-0">{{__('Update')}} </button>
+                            <button class="btn bg-gradient-success btn-sm float-left mt-4 mb-0">{{__('Update')}} </button>
                         </div>
                     </div>
                 </form>
