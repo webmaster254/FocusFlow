@@ -5,12 +5,12 @@
     <div class="container-fluid my-3 py-3">
         <div class="row mb-5">
             <div class="col-lg-3">
-                <div class="card position-sticky top-1">
-                    <ul class="nav flex-column bg-white border-radius-lg p-3">
+                <div class="card bg-gray-800 position-sticky top-1">
+                    <ul class="nav flex-column bg-gray-800 border-radius-lg p-3">
                         <li class="nav-item">
                             <a class="nav-link text-body" data-scroll="" href="#profile">
                                 <div class="icon me-2">
-                                    <svg class="text-dark mb-1" width="16px" height="16px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <svg class="text-green mb-1" width="16px" height="16px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <g transform="translate(-1720.000000, -592.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -26,13 +26,13 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <span class="text-sm">{{__('Profile')}}</span>
+                                <span class="text-sm text-white">{{__('Profile')}}</span>
                             </a>
                         </li>
                         <li class="nav-item pt-2">
                             <a class="nav-link text-body" data-scroll="" href="#basic-info">
                                 <div class="icon me-2">
-                                    <svg class="text-dark mb-1" width="16px" height="16px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <svg class="text-green mb-1" width="16px" height="16px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <g transform="translate(-1870.000000, -591.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -46,13 +46,13 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <span class="text-sm">{{__('Basic Info')}}</span>
+                                <span class="text-sm text-white">{{__('Basic Info')}}</span>
                             </a>
                         </li>
                         <li class="nav-item pt-2">
                             <a class="nav-link text-body" data-scroll="" href="#password">
                                 <div class="icon me-2">
-                                    <svg class="text-dark mb-1" width="16px" height="16px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <svg class="text-green mb-1" width="16px" height="16px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <title>box-3d-50</title>
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -67,7 +67,7 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <span class="text-sm">{{__('Change Password')}}</span>
+                                <span class="text-sm text-white">{{__('Change Password')}}</span>
                             </a>
                         </li>
 
@@ -76,13 +76,13 @@
             </div>
             <div class="col-lg-9 mt-lg-0 mt-4">
                 <!-- Card Profile -->
-                <div class="card card-body" id="profile">
+                <div class="card card-body bg-gray-800" id="profile">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-sm-auto col-4">
                             <div class="avatar avatar-xl position-relative">
 
                                 @if(empty($user['photo']))
-                                    <img src="{{PUBLIC_DIR}}/img/user-avatar-placeholder.png" class="w-100 border-radius-lg shadow-sm">
+                                    <img src="/img/user-avatar-placeholder.png" class="w-100 border-radius-lg shadow-sm">
                                                   @else
 
                                     <img src="{{asset($user['photo'])}}"alt="bruce" class="w-100 border-radius-lg shadow-sm">
@@ -92,7 +92,7 @@
                         </div>
                         <div class="col-sm-auto col-8 my-auto">
                             <div class="h-100">
-                                <h5 class="mb-1 font-weight-bolder">
+                                <h5 class="mb-1 font-weight-bolder text-white">
                                     {{$user->first_name}} {{$user->last_name}}
                                 </h5>
 
@@ -113,22 +113,22 @@
                             </ul>
                         </div>
                     @endif
-                    <div class="card mt-4" id="basic-info">
+                    <div class="card mt-4 bg-gray-800" id="basic-info">
 
-                        <div class="card-header">
+                        <div class="card-header bg-gray-800">
                             <h5>{{__('Basic Info')}}</h5>
                         </div>
 
-                        <div class="card-body pt-0">
+                        <div class="card-body bg-gray-800 pt-0">
                             <div class="row">
                                 <div class="col-6">
-                                    <label class="form-label">{{__('First Name')}}</label>
+                                    <label class="form-label text-white">{{__('First Name')}}</label>
                                     <div class="input-group">
-                                        <input id="firstName" name="first_name" @if (!empty($user)) value="{{$user->first_name}}" @endif class="form-control" type="text" placeholder="Alec" required="required">
+                                        <input id="firstName" name="first_name" @if (!empty($user)) value="{{$user->first_name}}" @endif class="form-control bg-gray-700 text-white" type="text" placeholder="Alec" required="required">
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <label class="form-label">{{__('Last Name')}}</label>
+                                    <label class="form-label text-white">{{__('Last Name')}}</label>
                                     <div class="input-group">
                                         <input id="lastName" name="last_name" @if (!empty($user)) value="{{$user->last_name}}" @endif class="form-control" type="text"  required="required">
                                     </div>
