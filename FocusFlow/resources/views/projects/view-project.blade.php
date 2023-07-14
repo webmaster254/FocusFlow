@@ -15,17 +15,17 @@
 
 
 
-                    <div class="card " id="basic-info">
-                        <div class="card-header">
+                    <div class="card bg-gray-800" id="basic-info">
+                        <div class="card-header bg-gray-800">
 
                             <div class="float-end">
                                 <a  href="/projects" type="button" class="btn btn-sm bg-gradient-dark mt-4">
                                     {{__('Go back to Project List')}}
                                 </a>
-                                <a href="/create-project?id={{$project->id}}" type="button" class="btn btn-sm bg-gradient-secondary mt-4">{{__('Edit')}}</a>
+                                <a href="/create-project?id={{$project->id}}" type="button" class="btn btn-sm bg-green mt-4">{{__('Edit')}}</a>
 
                             </div>
-                            <h5 class="mt-4">{{$project->title}}</h5>
+                            <h5 class="mt-4 text-white">{{$project->title}}</h5>
 
 
 
@@ -34,7 +34,7 @@
                             <div class="card-body pt-0">
                                 <div class="row">
                                     <div class="col">
-                                        <h6>{{__('Start date')}}</h6>
+                                        <h6 class="text-white opacity-7">{{__('Start date')}}</h6>
                                         <span>
                                             <div class="ms-auto">
                             <span class="badge badge-sm bg-gradient-success">{{$project->start_date}}</span>
@@ -43,7 +43,7 @@
                                         </span>
                                     </div>
                                     <div class="col">
-                                        <h6>{{__('End date')}}</h6>
+                                        <h6 class="text-white opacity-7">{{__('End date')}}</h6>
                                         <span>
                                             <div class="ms-auto">
                             <span class="badge badge-sm bg-gradient-dark">{{$project->end_date}}</span>
@@ -54,18 +54,18 @@
 
 
                                 </div>
-                                <h6 class="mt-4">{{__('Summary')}}</h6>
-                                <div class="d-flex bg-gray-100 border-radius-lg p-3 mb-4">
-                                    <p class="my-auto">
-                                        <span class="text-secondary text-sm me-1"></span>{{$project->summary}}<span class="text-secondary text-sm ms-1"></span>
+                                <h6 class="mt-4 text-white opacity-7">{{__('Summary')}}</h6>
+                                <div class="d-flex bg-gray-700 border-radius-lg p-3 mb-4">
+                                    <p class="my-auto text-white opacity-7">
+                                        <span class="text-white  text-sm me-1"></span>{{$project->summary}}<span class="text-white text-sm ms-1"></span>
                                     </p>
 
                                 </div>
 
 
 
-                                <h6 class="mt-4">{{__('Description')}}</h6>
-                                <p class="mt-4 mb-0">{!! $project->description !!}</p>
+                                <h6 class="mt-4 text-white ">{{__('Description')}}</h6>
+                                <p class="mt-4 mb-0 text-white opacity-7">{!! $project->description !!}</p>
                             </div>
 
                         </div>
@@ -83,11 +83,11 @@
 
         </div>
             <div class="col-md-4">
-                <div class="card" id="additional_settings">
-                    <div class="card-header">
+                <div class="card bg-gray-800" id="additional_settings">
+                    <div class="card-header bg-gray-800">
                         <div class="row">
                             <div class="col-md-6">
-                                <h6 class="mb-0">{{__('Project Todo list')}}</h6>
+                                <h6 class="mb-0 text-white">{{__('Project Todo list')}}</h6>
 
                             </div>
 
@@ -99,14 +99,14 @@
                             </div>
 
                         </div>
-                        <hr class="horizontal dark mb-0">
+                        <hr class="horizontal white mb-0">
                     </div>
-                    <div class="card-body p-3 pt-0">
+                    <div class="card-body  bg-gray-800 p-3 pt-0">
                         <ul class="list-group list-group-flush" data-toggle="checklist">
                             @foreach($todos_projects as $todo)
 
 
-                                <li class="list-group-item border-0 flex-column align-items-start ps-0 py-0 mb-3">
+                                <li class="list-group-item border-0 flex-column align-items-start ps-0 py-0 mb-3 bg-gray-800">
                                     <div class="checklist-item checklist-item-primary ps-2 ms-3">
                                         <div class="d-flex align-items-center">
                                             <div class="form-check">
@@ -117,10 +117,10 @@
 
                                                 >
                                             </div>
-                                            <h6 class="mb-0 text-dark font-weight-bold text-sm">{{$todo->title}}</h6>  <div class="float-end">
+                                            <h6 class="mb-0 text-white opacity-7 font-weight-bold text-sm">{{$todo->title}}</h6>  <div class="float-end">
 
                                                 <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="/delete/today-todo/{{$todo->id}}"><i class="far fa-trash-alt me-2"></i></a>
-                                                <a class="btn btn-link text-dark px-3 mb-0" href="/add-task/?id={{$todo->id}}"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i></a>
+                                                <a class="btn btn-link text-white px-3 mb-0" href="/add-task/?id={{$todo->id}}"><i class="fas fa-pencil-alt text-white me-2" aria-hidden="true"></i></a>
                                                 </a>
 
                                             </div>
@@ -128,8 +128,8 @@
                                         </div>
                                         <div class="d-flex align-items-center ms-4 mt-3 ps-1">
                                             <div>
-                                                <p class="text-xs mb-0 text-secondary font-weight-bold">{{__('Date')}}</p>
-                                                <span class="text-xs font-weight-bolder">{{$todo->date}}</span>
+                                                <p class="text-xs mb-0 text-white font-weight-bold">{{__('Date')}}</p>
+                                                <span class="text-xs text-white opacity-7 font-weight-bolder">{{$todo->date}}</span>
                                             </div>
 
                                         </div>

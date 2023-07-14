@@ -17,7 +17,7 @@
                     <p class="text-white opacity-8 fadeIn3 fadeInBottom">{{__('— Paul Tournier')}} </p>
                 </div>
             </div>
-            <a  href="/create-project" type="button" class="btn bg-gradient-light">{{__('Create Project')}}</a>
+            <a  href="/create-project" type="button" class="btn bg-green">{{__('Create Project')}}</a>
 
 
         </div>
@@ -28,7 +28,7 @@
         <section class="py-3">
             <div class="row">
                 <div class="col-md-8 me-auto text-left">
-                    <h5>{{__('List of your awesome projects')}}</h5>
+                    <h5 class="text-white">{{__('List of your awesome projects')}}</h5>
 
                 </div>
             </div>
@@ -36,14 +36,14 @@
                 @foreach($projects as $project)
 
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card card-blog ">
-                            <div class="card-body p-3">
+                        <div class="card card-blog bg-gray-800 ">
+                            <div class="card-body p-3 bg-gray-800">
                                 <div class="d-flex">
                                     <div class="avatar avatar-xl bg-gradient-dark border-radius-md p-2">
                                         <h1 class="text-white">{{$project->title['0']}}</h1>
                                     </div>
                                     <div class="ms-3 my-auto">
-                                        <h6>{{$project->title}}</h6>
+                                        <h6 class="text-green">{{$project->title}}</h6>
 
                                     </div>
 
@@ -51,19 +51,19 @@
 
                                 </div>
 
-                                <p class="text-sm mt-3"> {{$project->summary}} </p>
+                                <p class="text-sm mt-3 text-white opacity-7"> {{$project->summary}} </p>
 
                                 <span class="badge bg-gradient-success font-weight-bold">{{$project->status}}</span>
                                 <hr class="horizontal dark">
                                 <div class="row">
                                     <div class="col-6 ">
-                                        <h6 class="text-sm mb-0">@if(!empty($project->start_date))
+                                        <h6 class="text-sm mb-0 text-white opacity-7">@if(!empty($project->start_date))
                                                 {{$project->start_date->format(config('app.date_format'))}}
                                             @endif</h6>
                                         <p class="text-secondary text-sm font-weight-bold mb-0">{{__('Start date')}}</p>
                                     </div>
                                     <div class="col-6 text-end">
-                                        <h6 class="text-sm mb-0">@if(!empty($project->end_date))
+                                        <h6 class="text-sm mb-0 text-white opacity-7">@if(!empty($project->end_date))
                                                 {{$project->end_date->format(config('app.date_format'))}}
                                             @endif</h6>
                                         <p class="text-secondary text-sm font-weight-bold mb-0">{{__('Due date')}}</p>
@@ -71,7 +71,7 @@
                                     <div class="btn-group">
                                         <a href="/view-project?id={{$project->id}}" type="button" class="btn bg-gradient-dark mt-3">{{__('View')}}</a>
                                         <a href="/create-project?id={{$project->id}}" type="button" class="btn bg-gradient-secondary mt-3">{{__('Edit')}}</a>
-                                        <a href="/delete/project/{{$project->id}}" type="button" class="btn bg-gradient-primary mt-3">{{__('Delete')}}</a>
+                                        <a href="/delete/project/{{$project->id}}" type="button" class="btn bg-danger text-dark mt-3">{{__('Delete')}}</a>
 
                                     </div>
                                 </div>
