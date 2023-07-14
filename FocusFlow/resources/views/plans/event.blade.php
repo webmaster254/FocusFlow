@@ -1,4 +1,4 @@
-<form action="/save-event" method="post" id="form_main">
+<form action="/save-event" method="post" id="form_main" c>
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul class="list-unstyled">
@@ -13,7 +13,7 @@
     @if($event)
             <h4>{{__('Edit')}}</h4>
         @else
-            <h4>{{__('Add New Event')}}</h4>
+            <h4 >{{__('Add New Event')}}</h4>
         @endif
 
 

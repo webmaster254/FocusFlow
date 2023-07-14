@@ -15,15 +15,15 @@
             <div class="col-xl-3">
                 <div class="row">
                     <div class="col-xl-12 col-md-6 mt-xl-0 mt-4">
-                        <div class="col-12 ms-auto">
-                            <button type="button" class="btn bg-gradient-primary" id="addEvent">
+                        <div class="col-12 ms-auto bg-gray-800">
+                            <button type="button" class="btn bg-green" id="addEvent">
                                 {{__('Add Event')}}
                             </button>
                         </div>
-                        <div class="card">
+                        <div class="card bg-gray-700">
 
-                            <div class="card-header p-3 pb-0">
-                                <h6 class="mb-0">
+                            <div class="card-header  bg-gray-700 p-3 pb-0">
+                                <h6 class="mb-0 text-white">
                                     {{__('Events')}}
 
                                 </h6>
@@ -34,15 +34,15 @@
 
                                     <div class="d-flex mt-4">
                                         <div>
-                                            <div class="icon icon-shape bg-primary-soft shadow text-center border-radius-md shadow-none">
-                                                <i class="ni ni-bell-55 text-lg text-primary text-gradient opacity-10" aria-hidden="true"></i>
+                                            <div class="icon icon-shape bg-green shadow text-center border-radius-md shadow-none">
+                                                <i class="ni ni-bell-55 text-lg text-dark text-gradient opacity-10" aria-hidden="true"></i>
                                             </div>
                                         </div>
                                         <div class="ms-3">
                                             <div class="numbers">
-                                                <h6 class="mb-1 text-dark text-sm">{{$event->title}}</h6>
-                                                <span class="text-sm">{{$event->start_date->format(config('app.date_time_format'))}}</span>
-                                                <a class="btn btn-link text-dark px-3 mb-0" href="/delete/event/{{$event->id}}"><i class="fas fa-trash text-dark me-2" aria-hidden="true"></i>{{__('Delete')}}</a>
+                                                <h6 class="mb-1 text-white text-sm">{{$event->title}}</h6>
+                                                <span class="text-sm text-white opacity-7">{{$event->start_date->format(config('app.date_time_format'))}}</span>
+                                                <a class="btn btn-link text-danger px-3 mb-0" href="/delete/event/{{$event->id}}"><i class="fas fa-trash text-dark me-2" aria-hidden="true"></i>{{__('Delete')}}</a>
                                             </div>
 
 
