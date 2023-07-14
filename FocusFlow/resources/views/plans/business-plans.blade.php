@@ -17,7 +17,7 @@
                     </p>
                 </div>
             </div>
-            <a  href="/write-business-plan" type="button" class="btn bg-gradient-light">
+            <a  href="/write-business-plan" type="button" class="btn bg-green">
                 {{__('Write your Business Plan')}}
 
             </a>
@@ -29,29 +29,29 @@
 
         @foreach($plans as $plan)
             <div class="col-md-4 mb-4">
-                <div class="card card-pricing">
-                    <div class="card-header bg-gradient-light text-center pt-4 pb-5 position-relative">
+                <div class="card card-pricing bg-gray-700">
+                    <div class="card-header bg-gray-700 text-center pt-4 pb-5 position-relative">
                         <div class="z-index-1 position-relative ">
-                            <h5 class="mt-6"> {{$settings['company_name']}}</h5>
-                            <h3 class=" text-muted mt-2 mb-0">
+                            <h5 class="mt-6 text-green"> {{$settings['company_name']}}</h5>
+                            <h3 class=" text-white mt-2 mb-0">
                                 {{__('Business Plan')}}</h3>
-                            <h6 class="text-muted">{{$plan->date->format(config('app.date_format'))}}</h6>
+                            <h6 class="text-white opacity-7">{{$plan->date->format(config('app.date_format'))}}</h6>
                         </div>
                     </div>
                     <div class="text-center mt-4">
-                        <p class="text-muted">{{__('Prepared by')}}</p>
-                        <h5>{{$plan->name}}</h5>
-                        <h6 class="text-muted">{{$plan->email}}</h6>
+                        <p class="text-green">{{__('Prepared by')}}</p>
+                        <h5 class="text-white opacity-7">{{$plan->name}}</h5>
+                        <h6 class="text-white opacity-7">{{$plan->email}}</h6>
 
                     </div>
 
                     <div class="card-body text-center">
 
-                        <a href="/view-business-plan?id={{$plan->id}}" type="button" class="btn bg-gradient-dark mb-3">
+                        <a href="/view-business-plan?id={{$plan->id}}" type="button" class="btn bg-green mb-3">
                             {{__('Read')}}
                         </a>
                         <a class="btn bg-gradient-secondary mb-3" href="/write-business-plan?id={{$plan->id}}">{{__('Edit')}}</a>
-                        <a href="/delete/business-plan/{{$plan->id}}" type="button" class="btn bg-gradient-warning">{{__('Delete')}}</a>
+                        <a href="/delete/business-plan/{{$plan->id}}" type="button" class="btn bg-danger text-dark">{{__('Delete')}}</a>
                     </div>
                 </div>
             </div>
