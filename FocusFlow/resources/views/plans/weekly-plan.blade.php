@@ -3,8 +3,8 @@
 
 
 @section('content')
-    <div class="card">
-        <div class="card-header">
+    <div class="card bg-gray-800">
+        <div class="card-header bg-gray-800 text-white">
             {{__('Plan Your Week')}}
 
         </div>
@@ -23,19 +23,19 @@
                     </div>
                 @endif
                 <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">{{__('Title')}} </label><span class="text-danger">*</span>
-                    <input class="form-control" type="text" name="title" id="example-text-input"
+                    <label for="example-text-input" class="form-control-label text-white opacity-7">{{__('Title')}} </label><span class="text-danger">*</span>
+                    <input class="form-control bg-gray-700 text-white" type="text" name="title" id="example-text-input"
                            @if (!empty($plan)) value="{{$plan->title}}" @endif>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="example-date-input" class="form-control-label">
+                            <label for="example-date-input" class="form-control-label text-white opacity-7">
                                 {{__('From Date')}}
 
                             </label>
-                            <input class="form-control"  name="from_date" type="date"  id="fromdate"
+                            <input class="form-control  text-white bg-gray-700"  name="from_date" type="date"  id="fromdate"
                                    @if(!empty($plan))
                                    value="{{$plan->from_date}}"
                                    @else
@@ -46,11 +46,11 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="example-date-input" class="form-control-label">
+                            <label for="example-date-input" class="form-control-label text-white opacity-7">
                                {{__('To Date')}}
 
                             </label>
-                            <input class="form-control" name="to_date" type="date" id="todate"
+                            <input class="form-control bg-gray-700 text-white" name="to_date" type="date" id="todate"
                                    @if(!empty($plan))
                                    value="{{$plan->to_date}}"
                                    @else
@@ -66,8 +66,8 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">
+                        <div class="form-group text-white">
+                            <label for="exampleFormControlTextarea1 " class="text-white opacity-7">
                                 {{__('Monday')}}
 
                             </label>
@@ -77,7 +77,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">{{__('Tuesday')}}</label>
+                            <label for="exampleFormControlTextarea1" class="text-white opacity-7">{{__('Tuesday')}}</label>
                             <textarea class="form-control" name="tuesday" id="tuesday" rows="10">
                                 @if(!empty($plan)){{$plan->tuesday}}@endif</textarea>
                         </div>
@@ -87,7 +87,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">{{__('Wednesday')}}</label>
+                            <label for="exampleFormControlTextarea1 " class="text-white opacity-7">{{__('Wednesday')}}</label>
                             <textarea class="form-control" name="wednesday" id="wednesday" rows="10">
                                 @if(!empty($plan)){{$plan->wednesday}}@endif</textarea>
                         </div>
@@ -95,7 +95,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">{{__('Thursday')}}</label>
+                            <label for="exampleFormControlTextarea1" class="text-white opacity-7">{{__('Thursday')}}</label>
                             <textarea class="form-control" name="thursday" id="thursday" rows="10">
                                 @if(!empty($plan)){{$plan->thursday}}@endif
                             </textarea>
@@ -106,7 +106,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">{{__('Friday')}}</label>
+                            <label for="exampleFormControlTextarea1" class="text-white opacity-7">{{__('Friday')}}</label>
                             <textarea class="form-control" name="friday" id="friday" rows="10">
                                 @if(!empty($plan)){{$plan->friday}}@endif
                             </textarea>
@@ -115,7 +115,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">{{__('Saturday')}}</label>
+                            <label for="exampleFormControlTextarea1" class="text-white opacity-7">{{__('Saturday')}}</label>
                             <textarea class="form-control" name="saturday" id="saturday" rows="10">
                                 @if(!empty($plan)){{$plan->saturday}}@endif
                             </textarea>
@@ -126,7 +126,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">{{__('Sunday')}}</label>
+                            <label for="exampleFormControlTextarea1" class="text-white opacity-7">{{__('Sunday')}}</label>
                             <textarea class="form-control" name="sunday" id="sunday" rows="10">
                                 @if(!empty($plan)){{$plan->sunday}}@endif
                             </textarea>
@@ -135,7 +135,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">{{__('Notes')}}</label>
+                            <label for="exampleFormControlTextarea1" class="text-white opacity-7">{{__('Notes')}}</label>
                             <textarea class="form-control" name="notes" id="notes" rows="10"></textarea>
                         </div>
 
@@ -148,8 +148,8 @@
                 @endif
 
                 @csrf
-                <button type="submit" class="btn bg-gradient-secondary">{{__('Save')}}</button>
-                <button type="button" class="btn bg-gradient-secondary">{{__('Close')}}</button>
+                <button type="submit" class="btn bg-green">{{__('Save')}}</button>
+                <a href="/weekly-plans" type="button" class="btn bg-gradient-secondary">{{__('Close')}}</a>
             </form>
 
 
@@ -190,7 +190,9 @@
 
             plugins: 'lists,table',
             toolbar: 'numlist bullist',
-            lists_indent_on_tab: false
+            lists_indent_on_tab: false,
+            skin: 'oxide-dark',
+            content_css : 'dark'
 
 
         });
@@ -199,7 +201,9 @@
 
             plugins: 'lists,table',
             toolbar: 'numlist bullist',
-            lists_indent_on_tab: false
+            lists_indent_on_tab: false,
+            skin: 'oxide-dark',
+            content_css : 'dark'
 
 
         });
@@ -208,7 +212,9 @@
 
             plugins: 'lists,table',
             toolbar: 'numlist bullist',
-            lists_indent_on_tab: false
+            lists_indent_on_tab: false,
+            skin: 'oxide-dark',
+            content_css : 'dark'
 
 
         });
@@ -217,7 +223,9 @@
 
             plugins: 'lists,table',
             toolbar: 'numlist bullist',
-            lists_indent_on_tab: false
+            lists_indent_on_tab: false,
+            skin: 'oxide-dark',
+            content_css : 'dark'
 
 
         });
@@ -226,7 +234,9 @@
 
             plugins: 'lists,table',
             toolbar: 'numlist bullist',
-            lists_indent_on_tab: false
+            lists_indent_on_tab: false,
+            skin: 'oxide-dark',
+            content_css : 'dark'
 
 
         });
@@ -235,7 +245,9 @@
 
             plugins: 'lists,table',
             toolbar: 'numlist bullist',
-            lists_indent_on_tab: false
+            lists_indent_on_tab: false,
+            skin: 'oxide-dark',
+            content_css : 'dark'
 
 
         });
@@ -244,7 +256,9 @@
 
             plugins: 'lists,table',
             toolbar: 'numlist bullist',
-            lists_indent_on_tab: false
+            lists_indent_on_tab: false,
+            skin: 'oxide-dark',
+            content_css : 'dark'
 
 
         });
@@ -253,7 +267,9 @@
 
             plugins: 'lists,table',
             toolbar: 'numlist bullist',
-            lists_indent_on_tab: false
+            lists_indent_on_tab: false,
+            skin: 'oxide-dark',
+            content_css : 'dark'
 
 
         });
@@ -262,7 +278,9 @@
 
             plugins: 'lists,table',
             toolbar: 'numlist bullist',
-            lists_indent_on_tab: false
+            lists_indent_on_tab: false,
+            skin: 'oxide-dark',
+            content_css : 'dark'
 
 
         });

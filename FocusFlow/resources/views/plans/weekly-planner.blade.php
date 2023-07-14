@@ -19,7 +19,7 @@
                     </p>
                 </div>
             </div>
-            <a  href="/weekly-plan" type="button" class="btn bg-gradient-light">
+            <a  href="/weekly-plan" type="button" class="btn bg-green">
                 {{__('Make a Weekly Plan')}}
 
             </a>
@@ -29,30 +29,30 @@
 
     <div class="row">
         <div class="col-md-12 mt-4">
-            <div class="card">
-                <div class="card-header pb-0 px-3">
-                    <h6 class="mb-0">{{__('List of Weekly Plans')}}</h6>
+            <div class="card bg-gray-800">
+                <div class="card-header pb-0 px-3 bg-gray-800">
+                    <h6 class="mb-0 text-white">{{__('List of Weekly Plans')}}</h6>
                 </div>
-                <div class="card-body pt-4 p-3">
+                <div class="card-body pt-4 p-3 bg-gray-800">
                     <ul class="list-group">
 
                         @foreach($plans as $plan)
-                            <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
+                            <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-700 border-radius-lg">
                                 <div class="d-flex flex-column">
-                                    <h6 class="mb-3 text-sm">{{$plan->title}}</h6>
+                                    <h6 class="mb-3 text-sm text-green">{{$plan->title}}</h6>
 
-                                    <span class="text-xs mb-4">
+                                    <span class="text-xs mb-4 text-white ">
                                         {{__('From Date:')}}
 
-                                        <span class="text-dark ms-sm-2 font-weight-bold ">
+                                        <span class="text-white opacity-7 ms-sm-2 font-weight-bold ">
                                             {{$plan->from_date->format(config('app.date_format'))}}
                                         </span>
 
                                     </span>
-                                    <span class="text-xs">
+                                    <span class="text-xs text-white ">
                                         {{__('To Date:')}}
 
-                                        <span class="text-dark ms-sm-2 font-weight-bold">
+                                        <span class="text-white opacity-7  ms-sm-2 font-weight-bold">
                                             {{$plan->to_date->format(config('app.date_format'))}}
                                         </span>
 
@@ -62,7 +62,7 @@
                                 <div class="ms-auto text-end">
 
                                     <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="/delete/weekly-plan/{{$plan->id}}"><i class="far fa-trash-alt me-2"></i>{{__('Delete')}}</a>
-                                    <a class="btn btn-link text-dark px-3 mb-0" href="/weekly-plan?id={{$plan->id}}"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>{{__('Edit')}}</a>
+                                    <a class="btn btn-link text-green px-3 mb-0" href="/weekly-plan?id={{$plan->id}}"><i class="fas fa-pencil-alt text-green me-2" aria-hidden="true"></i>{{__('Edit')}}</a>
                                 </div>
                             </li>
                         @endforeach
