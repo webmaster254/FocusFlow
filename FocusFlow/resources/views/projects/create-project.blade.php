@@ -14,33 +14,33 @@
                 @endif
 
                 <div class="col-lg-9 col-12 mx-auto">
-                    <div class="card card-body mt-4">
-                        <h6 class="mb-0">{{__('New Project')}}</h6>
-                        <p class="text-sm mb-0">{{__('Create new project')}}</p>
+                    <div class="card card-body bg-gray-800 mt-4">
+                        <h6 class="mb-0 text-green">{{__('New Project')}}</h6>
+                        <p class="text-sm mb-0 text-white opacity-7">{{__('Create new project')}}</p>
                         <hr class="horizontal dark my-3">
 
 
-                        <label for="projectName" class="form-label">{{__('Project Name')}}</label>
-                        <input type="text"@if (!empty($project)) value="{{$project->title}}"@endif   name="title" class="form-control" id="projectName">
+                        <label for="projectName" class="form-label text-white ">{{__('Project Name')}}</label>
+                        <input type="text"@if (!empty($project)) value="{{$project->title}}"@endif   name="title" class="form-control bg-gray-700 text-white" id="projectName">
 
-                        <label class="mt-4 text-sm mb-0">{{__('Project Summary')}}</label>
-                        <p class="form-text text-muted text-xs ms-1">
+                        <label class="mt-4 text-sm mb-0 text-white">{{__('Project Summary')}}</label>
+                        <p class="form-text text-white opacity-7 text-xs ms-1 ">
                             {{__('Write a short summary of the project.Within 225 words')}}
                         </p>
 
                         <div class="form-group">
 
 
-                            <textarea name="summary" class="form-control" rows="4" id="editor" name="budget">@if (!empty($project)){{$project->summary}}@endif</textarea>
+                            <textarea name="summary" class="form-control bg-gray-700 text-white" rows="4" id="editor" name="budget">@if (!empty($project)){{$project->summary}}@endif</textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="example-text-input" class="form-control-label">
+                            <label for="example-text-input" class="form-control-label text-white">
                                 {{__('Status')}}
 
                             </label><span class="text-danger">*</span>
 
-                            <select class="form-select" aria-label="Default select example" name="status">
+                            <select class="form-select bg-gray-700 text-white opacity-7" aria-label="Default select example" name="status">
 
 
                                 <option value="Pending"
@@ -55,15 +55,15 @@
 
                         <div class="row mt-4">
                             <div class="col-6">
-                                <label class="form-label">{{__('Start Date')}}</label>
-                                <input class="form-control" name="start_date" id="start_date" @if(!empty($project))value="{{$project->start_date}}"
+                                <label class="form-label text-white opacity-7">{{__('Start Date')}}</label>
+                                <input class="form-control bg-gray-700 text-white " name="start_date" id="start_date" @if(!empty($project))value="{{$project->start_date}}"
                                        @else
                                        value="{{date('Y-m-d')}}"
                                     @endif>
                             </div>
                             <div class="col-6">
-                                <label class="form-label">{{__('End Date')}}</label>
-                                <input class="form-control" name="end_date"  id="end_date"  @if(!empty($project))
+                                <label class="form-label text-white">{{__('End Date')}}</label>
+                                <input class="form-control bg-gray-700 text-white opacity-7" name="end_date"  id="end_date"  @if(!empty($project))
                                 value="{{$project->end_date}}"
                                        @else
                                        value="{{date('Y-m-d')}}"
@@ -74,8 +74,8 @@
 
 
 
-                        <label class="mt-4 text-sm mb-0">{{__('Project Description')}}</label>
-                        <p class="form-text text-muted text-xs ms-1">
+                        <label class="mt-4 text-sm mb-0 text-white">{{__('Project Description')}}</label>
+                        <p class="form-text text-white opacity-7 text-xs ms-1">
                             {{__('Write a well organised description of the project.')}}
                         </p>
 
@@ -90,9 +90,13 @@
 
                         <div class="d-flex  mt-4">
 
-                            <button type="submit" name="button" class="btn bg-gradient-primary m-0 ">
+                            <button type="submit" name="button" class="btn bg-green m-0 ">
                                 {{__('Save')}}
                             </button>
+                            <a href="/projects" type="button" class="btn bg-gradient-secondary m-0">
+                    {{__('Close')}}
+
+</a>
                         </div>
                     </div>
                 </div>
@@ -127,6 +131,8 @@
 
 
                 plugins: 'table,code',
+                skin: 'oxide-dark',
+            content_css : 'dark'
 
 
             });

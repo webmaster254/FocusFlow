@@ -65,7 +65,7 @@ body {
 hr {
   margin: 1rem 0;
   color: inherit;
-  background-color: currentColor;
+  background-color: #fff;
   border: 0;
   opacity: 0.25;
 }
@@ -13319,6 +13319,7 @@ fieldset:disabled .btn {
   box-shadow: none;
 }
 
+
 .btn-outline-dark:hover:not(.active) {
   background-color: transparent;
   opacity: .75;
@@ -14543,6 +14544,7 @@ hr.vertical.gray-light {
 
 hr.horizontal {
   background-color: transparent;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0));
 }
 
 hr.horizontal.light {

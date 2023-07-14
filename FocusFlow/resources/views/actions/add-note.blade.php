@@ -2,8 +2,8 @@
 @section('content')
 
 
-    <div class="card">
-        <div class="card-header pb-0 px-3">
+    <div class="card bg-gray-800">
+        <div class="card-header bg-gray-800 text-green pb-0 px-3">
 
             {{__('Write Note')}}
 
@@ -19,24 +19,24 @@
                     </ul>
                 </div>
             @endif
-            <div class="card-body">
+            <div class="card-body bg-gray-800">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">{{ __('Title') }}</label>
-                    <input type="text" name="title" @if (!empty($note)) value="{{$note->title}}"@endif class="form-control" id="exampleFormControlInput1" >
+                    <label for="exampleFormControlInput1" class="form-label text-white">{{ __('Title') }}</label>
+                    <input type="text" name="title" @if (!empty($note)) value="{{$note->title}}"@endif class="form-control bg-gray-700 text-white" id="exampleFormControlInput1" >
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label"> {{ __('Topic/Subject') }}</label>
-                    <input type="text" name="topic" @if (!empty($note)) value="{{$note->topic}}"@endif  class="form-control" id="exampleFormControlInput1" >
+                    <label for="exampleFormControlInput1" class="form-label text-white"> {{ __('Topic/Subject') }}</label>
+                    <input type="text" name="topic" @if (!empty($note)) value="{{$note->topic}}"@endif  class="form-control bg-gray-700 text-white" id="exampleFormControlInput1" >
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">{{ __('Write Notes') }}</label>
+                    <label for="exampleFormControlTextarea1" class="form-label text-white">{{ __('Write Notes') }}</label>
                     <textarea class="form-control" name="notes" id="notes" rows="20">@if (!empty($note)){!! $note->notes !!}@endif</textarea>
                 </div>
                 @csrf
                 @if($note)
                     <input type="hidden" name="id" value="{{$note->id}}">
                 @endif
-                <button class="btn btn-primary" type="submit">{{ __('Save') }}</button>
+                <button class="btn btn-success" type="submit">{{ __('Save') }}</button>
             </div>
 
         </form>
@@ -66,6 +66,8 @@
             relative_urls: false,
             remove_script_host: false,
             language: 'en',
+            skin: 'oxide-dark',
+            content_css : 'dark'
 
 
 
