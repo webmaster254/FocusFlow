@@ -30,7 +30,7 @@
                             </a>
                         </li>
                         <li class="nav-item pt-2">
-                            <a class="nav-link text-body" data-scroll="" href="#basic-info">
+                            <a class="nav-link text-body text-white" data-scroll="" href="#basic-info">
                                 <div class="icon me-2">
                                     <svg class="text-green mb-1" width="16px" height="16px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -116,7 +116,7 @@
                     <div class="card mt-4 bg-gray-800" id="basic-info">
 
                         <div class="card-header bg-gray-800">
-                            <h5>{{__('Basic Info')}}</h5>
+                            <h5 class="text-green">{{__('Basic Info')}}</h5>
                         </div>
 
                         <div class="card-body bg-gray-800 pt-0">
@@ -130,30 +130,30 @@
                                 <div class="col-6">
                                     <label class="form-label text-white">{{__('Last Name')}}</label>
                                     <div class="input-group">
-                                        <input id="lastName" name="last_name" @if (!empty($user)) value="{{$user->last_name}}" @endif class="form-control" type="text"  required="required">
+                                        <input id="lastName" name="last_name" @if (!empty($user)) value="{{$user->last_name}}" @endif class="form-control bg-gray-700 text-white" type="text"  required="required">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-6">
-                                    <label class="form-label mt-4">{{__('Email/Username')}}</label>
+                                    <label class="form-label mt-4 text-white">{{__('Email/Username')}}</label>
                                     <div class="input-group">
-                                        <input id="email" name="email"  @if (!empty($user)) value="{{$user->email}}" @endif class="form-control" type="email">
+                                        <input id="email" name="email"  @if (!empty($user)) value="{{$user->email}}" @endif class="form-control bg-gray-700 text-white" type="email">
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <label class="form-label mt-4">{{__('Phone Number')}}</label>
+                                    <label class="form-label mt-4 text-white">{{__('Phone Number')}}</label>
                                     <div class="input-group">
-                                        <input id="phone" name="phone_number" @if (!empty($user)) value="{{$user->phone_number}}" @endif class="form-control" type="number">
+                                        <input id="phone" name="phone_number" @if (!empty($user)) value="{{$user->phone_number}}" @endif class="form-control bg-gray-700 text-white" type="number">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6 align-self-center">
-                                    <label class="form-label mt-4">{{__('Language')}}</label>
-                                    <select class="form-control" name="language" id="choices-language">
+                                    <label class="form-label mt-4 text-white">{{__('Language')}}</label>
+                                    <select class="form-control bg-gray-700 text-white" name="language" id="choices-language">
 
                                         @foreach($available_languages as $key => $value)
                                             <option value="{{$key}}" @if($user->language===$key) selected @endif >{{$value}}</option>
@@ -165,14 +165,14 @@
 
                                 <div class="col-md-6 align-self-center">
                                     <div>
-                                        <label  for="photo_file" class="form-label mt-4">{{__('Upload photo')}}</label>
-                                        <input class="form-control" name="photo" type="file" id="logo_file">
+                                        <label  for="photo_file" class="form-label mt-4 text-white">{{__('Upload photo')}}</label>
+                                        <input class="form-control bg-gray-700 text-white" name="photo" type="file" id="logo_file">
                                     </div>
                                 </div>
 
                             </div>
                             @csrf
-                            <button type="submit" class="btn bg-gradient-dark btn-sm float-left mt-4 mb-0">
+                            <button type="submit" class="btn bg-gradient-success btn-sm float-left mt-4 mb-0">
                                 {{__('Update info')}}
                             </button>
                         </div>
@@ -180,9 +180,9 @@
                 </form>
 
                 <!-- Card Change Password -->
-                <div class="card mt-4" id="password">
-                    <div class="card-header">
-                        <h5>{{__('Change Password')}}</h5>
+                <div class="card mt-4 bg-gray-800" id="password">
+                    <div class="card-header bg-gray-800">
+                        <h5 class="text-green">{{__('Change Password')}}</h5>
                     </div>
                     <form action="/user-change-password" method="post">
                         @if ($errors->any())
@@ -195,23 +195,23 @@
                             </div>
                         @endif
                         <div class="card-body pt-0">
-                            <label class="form-label">{{__('Current password')}}</label>
+                            <label class="form-label text-white">{{__('Current password')}}</label>
                             <div class="form-group">
-                                <input class="form-control" name="password" type="password">
+                                <input class="form-control bg-gray-700 text-white" name="password" type="password">
                             </div>
-                            <label class="form-label">{{__('New password')}}</label>
+                            <label class="form-label text-white">{{__('New password')}}</label>
                             <div class="form-group">
-                                <input class="form-control" name="new_password" type="password">
+                                <input class="form-control bg-gray-700 text-white" name="new_password" type="password">
                             </div>
-                            <label class="form-label">{{__('Confirm new password')}}</label>
+                            <label class="form-label text-white">{{__('Confirm new password')}}</label>
                             <div class="form-group">
-                                <input class="form-control" name="new_password_confirmation" >
+                                <input class="form-control bg-gray-700 text-white" name="new_password_confirmation" >
                             </div>
 
                             @csrf
 
 
-                            <button type="submit" class="btn bg-gradient-dark btn-sm float-left  mb-0">
+                            <button type="submit" class="btn bg-gradient-success btn-sm float-left  mb-0">
                                {{__(' Update password')}}
                             </button>
                         </div>

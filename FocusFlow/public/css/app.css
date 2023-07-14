@@ -20881,6 +20881,7 @@ fieldset:disabled .btn {
   box-shadow: none;
 }
 
+
 .btn-outline-dark:hover:not(.active) {
   background-color: transparent;
   opacity: .75;
@@ -22105,6 +22106,7 @@ hr.vertical.gray-light {
 
 hr.horizontal {
   background-color: transparent;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0));
 }
 
 hr.horizontal.light {
