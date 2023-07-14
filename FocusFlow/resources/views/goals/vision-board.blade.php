@@ -4,9 +4,9 @@
 
 @section('content')
 
-    <form action="/vision-board" class="form-control dropzone" id="dropzone">
+    <form action="/vision-board" class="form-control dropzone bg-gray-800" id="dropzone">
         <div class="fallback">
-            <input name="file" type="file" multiple />
+            <input name="file" type="file"  class="text-white" multiple />
         </div>
     </form>
 
@@ -19,8 +19,8 @@
         @foreach($images as $image)
         <div class="col-md-4 mb-4">
 
-            <div class="card">
-                <div class="card-body">
+            <div class="card bg-gray-800">
+                <div class="card-body ">
                     <img
                         src="{{asset(PUBLIC_DIR.'/storage/'.$image->path)}}"
                         class="w-100 shadow-1-strong rounded mb-3"

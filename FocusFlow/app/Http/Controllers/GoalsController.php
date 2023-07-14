@@ -117,12 +117,14 @@ class GoalsController extends BaseController
 
     public function visionBoard()
     {    $images= Image::orderBy('id', 'DESC')->get();
+        // dump($images);
 
         return \view('goals.vision-board',[
 
             'selected_navigation' => 'vision-board',
             'images'=> $images,
         ]);
+        
     }
 
 
@@ -130,22 +132,17 @@ class GoalsController extends BaseController
 
     public function imagePost(Request $request)
     {
-        if(config('app.env') === 'demo')
-        {
-
-            return;
-
-        }
+        
         $request->validate([
             'file'=>'required|image'
         ]);
         $path = false;
-        if($request->file)
+        if($request->hasFile('file'))
         {
 
-            $path = $request->file('file')->store('public');
+            $path = $request->file('file')->store('public', 'public');
             $path = str_replace('public/','',$path);
-
+            
 
         }
 

@@ -13,8 +13,8 @@
 
 
 
-                <div class="card " id="basic-info">
-                    <div class="card-header">
+                <div class="card bg-gray-800" id="basic-info">
+                    <div class="card-header bg-gray-800">
 
                         <div class="float-end">
                             <a  href="/goals" type="button" class="btn btn-sm bg-gradient-dark mt-4">
@@ -22,7 +22,7 @@
                             </a>
 
                         </div>
-                        <h5 class="mt-4">{{$goal->name}}</h5>
+                        <h5 class="mt-4 text-white">{{$goal->name}}</h5>
 
 
 
@@ -31,8 +31,8 @@
                         <div class="card-body pt-0">
                             <div class="row">
 
-                                <div class="col">
-                                    <h6>{{__('Date Created')}}</h6>
+                                <div class="col text-white">
+                                    <h6 class="text-white opacity-7">{{__('Date Created')}}</h6>
                                     <span>
                                             <div class="ms-auto">
                             <span class="badge badge-sm bg-gradient-dark">{{$goal->created_at->format(config('app.date_format'))}}</span>
@@ -41,7 +41,7 @@
                                         </span>
                                 </div>
                                 <div class="col">
-                                    <h6>{{__('Estimate Due Date')}}</h6>
+                                    <h6 class="text-white opacity-7">{{__('Estimate Due Date')}}</h6>
                                     <span>
                                             <div class="ms-auto">
                             <span class="badge badge-sm bg-gradient-primary">{{$goal->date->format(config('app.date_format'))}}</span>
@@ -52,10 +52,10 @@
 
 
                             </div>
-                            <h6 class="mt-4">{{__('Description')}}</h6>
-                            <div class="d-flex bg-gray-100 border-radius-lg p-3 mb-4">
-                                <p class="my-auto">
-                                    <span class="text-secondary text-sm me-1"></span>{!! $goal->description !!}<span class="text-secondary text-sm ms-1"></span>
+                            <h6 class="mt-4 text-white opacity-7">{{__('Description')}}</h6>
+                            <div class="d-flex bg-gray-700 border-radius-lg p-3 mb-4 text-white opacity-7">
+                                <p class="my-auto text-white">
+                                    <span class="text-white text-sm me-1">{!! $goal->description !!}</span>
                                 </p>
 
                             </div>
@@ -77,11 +77,11 @@
 
             </div>
             <div class="col-md-4">
-                <div class="card" id="additional_settings">
-                    <div class="card-header">
+                <div class="card bg-gray-800" id="additional_settings">
+                    <div class="card-header bg-gray-800">
                         <div class="row">
                             <div class="col-md-6">
-                                <h6 class="mb-0">{{__('Goal Todo List')}}</h6>
+                                <h6 class="mb-0 text-white">{{__('Goal Todo List')}}</h6>
 
                             </div>
 

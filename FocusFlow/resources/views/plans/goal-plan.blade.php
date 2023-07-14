@@ -3,12 +3,12 @@
 
 @section('content')
 
-    <div class="card">
-        <div class="card-header">
+    <div class="card bg-gray-800">
+        <div class="card-header bg-gray-800 text-white">
             {{__('Plan for your dreams/goals')}}
         </div>
 
-        <div class="card-body">
+        <div class="card-body text-white">
             <form action="/save-goal-plan" method="post">
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -20,19 +20,19 @@
                     </div>
                 @endif
                 <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">
+                    <label for="example-text-input" class="form-control-label text-white opacity-7">
                         {{__('Title')}}
 
                     </label><span class="text-danger">*</span>
-                    <input class="form-control" name="title" type="text" id="example-text-input"  @if (!empty($plan)) value="{{$plan->title}}" @endif>
+                    <input class="form-control text-white bg-gray-700" name="title" type="text" id="example-text-input"  @if (!empty($plan)) value="{{$plan->title}}" @endif>
                 </div>
                 <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">
+                    <label for="example-text-input" class="form-control-label text-white opacity-7">
                         {{__('Choose the goal to plan for')}}
 
                     </label><span class="text-danger">*</span>
 
-                    <select class="form-select" aria-label="Default select example" name="goal_id">
+                    <select class="form-select bg-gray-700 text-white" aria-label="Default select example" name="goal_id">
 
                         @foreach ($goals as $goal)
                             <option value="{{$goal->id}}"
@@ -46,8 +46,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="example-date-input" class="form-control-label">{{__('Date')}}</label>
-                    <input class="form-control"  name="date" id="date"
+                    <label for="example-date-input" class="form-control-label text-white opacity-7">{{__('Date')}}</label>
+                    <input class="form-control bg-gray-700 text-white"  name="date" id="date"
                            @if(!empty($plan))
                            value="{{$plan->date}}"
                            @else
@@ -55,7 +55,7 @@
                     @endif>
                 </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1">{{__('Write a precise plan')}}</label><span class="text-danger">*</span>
+                        <label for="exampleFormControlTextarea1" class="text-white opacity-7">{{__('Write a precise plan')}}</label><span class="text-danger">*</span>
                         <textarea class="form-control" name="description" id="description" rows="3">@if (!empty($plan)){{$plan->description}}@endif</textarea>
                     </div>
 
@@ -63,14 +63,14 @@
                         <input type="hidden" name="id" value="{{$plan->id}}">
                     @endif
                 @csrf
-                <button type="submit" class="btn bg-gradient-secondary">
+                <button type="submit" class="btn bg-green">
                     {{__('Save')}}
 
                 </button>
-                <button type="button" class="btn bg-gradient-primary">
+                <a  href="/plans" type="button" class="btn bg-gradient-secondary">
                     {{__('Close')}}
 
-                </button>
+</a>
             </form>
 
         </div>
@@ -101,6 +101,8 @@
             selector: '#description',
 
             plugins: 'table,code',
+            skin: 'oxide-dark',
+            content_css : 'dark'
 
 
         });
