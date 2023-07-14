@@ -23,8 +23,8 @@
                                         </ul>
                                     </div>
                                 @endif
-                                <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
-                                    <h5 class="font-weight-bolder mb-0">
+                                <div class="card multisteps-form__panel p-3 border-radius-xl bg-gray-800 js-active" data-animation="FadeIn">
+                                    <h5 class="font-weight-bolder mb-0 text-green">
                                         {{__('Add New User')}}
 
                                     </h5>
@@ -32,27 +32,27 @@
                                     <div class="multisteps-form__content">
                                         <div class="row mt-3">
                                             <div class="col-12 col-sm-6">
-                                                <label>{{__('First Name')}}</label>
-                                                <input name="first_name"class="multisteps-form__input form-control" type="text" @if (!empty($selected_user)) value="{{$selected_user->first_name}}" @endif />
+                                                <label class="text-white">{{__('First Name')}}</label>
+                                                <input name="first_name"class="multisteps-form__input form-control bg-gray-700 text-white" type="text" @if (!empty($selected_user)) value="{{$selected_user->first_name}}" @endif />
                                             </div>
                                             <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                <label>{{__('Last Name')}}</label>
-                                                <input name="last_name"class="multisteps-form__input form-control" type="text" @if (!empty($selected_user)) value="{{$selected_user->last_name}}" @endif />
+                                                <label class="text-white">{{__('Last Name')}}</label>
+                                                <input name="last_name"class="multisteps-form__input form-control bg-gray-700 text-white" type="text" @if (!empty($selected_user)) value="{{$selected_user->last_name}}" @endif />
                                             </div>
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col-md-12">
-                                                <label>{{__('Username/Email')}}</label>
-                                                <input name="email" class="multisteps-form__input form-control" type="email" @if (!empty($selected_user)) value="{{$selected_user->email}}" @endif  />
+                                                <label class="text-white">{{__('Username/Email')}}</label>
+                                                <input name="email" class="multisteps-form__input form-control bg-gray-700 text-white" type="email" @if (!empty($selected_user)) value="{{$selected_user->email}}" @endif  />
                                             </div>
 
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col-md-12">
-                                                <label>{{__('Password')}}</label>
+                                                <label class="text-white">{{__('Password')}}</label>
 
-                                                <input name="password"  type="password" class="multisteps-form__input form-control" @if (!empty($selected_user)) value="{{$selected_user->password}}" @endif/>
-                                                <p class="text-xs">
+                                                <input name="password"  type="password" class="multisteps-form__input form-control bg-gray-700 text-white" @if (!empty($selected_user)) value="{{$selected_user->password}}" @endif/>
+                                                <p class="text-xs text-white opacity-7">
                                                     {{__('Keep blank if you do not want to change Password')}}
                                                     </p>
 
@@ -61,12 +61,12 @@
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                <label>{{__('Mobile Phone')}}</label>
-                                                <input name="mobile_number" class="multisteps-form__input form-control" @if(!empty($selected_user)) value="{{$selected_user->mobile_number}}" @endif >
+                                                <label class="text-white">{{__('Mobile Phone')}}</label>
+                                                <input name="mobile_number" class="multisteps-form__input form-control bg-gray-700 text-white" @if(!empty($selected_user)) value="{{$selected_user->mobile_number}}" @endif >
                                             </div>
                                             <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                <label>{{__('Telephone')}}</label>
-                                                <input name="phone_number"class="multisteps-form__input form-control"  @if(!empty($selected_user)) value="{{$selected_user->phone_number}}" @endif  />
+                                                <label class="text-white">{{__('Telephone')}}</label>
+                                                <input name="phone_number"class="multisteps-form__input form-control bg-gray-700 text-white"  @if(!empty($selected_user)) value="{{$selected_user->phone_number}}" @endif  />
                                             </div>
 
 
@@ -78,21 +78,21 @@
 
 
 
-                                <div class="card mt-4 multisteps-form__panel p-3 border-radius-xl bg-white" data-animation="FadeIn">
-                                    <h5 class="font-weight-bolder">{{__('Socials')}}</h5>
+                                <div class="card mt-4 multisteps-form__panel p-3 border-radius-xl bg-gray-800" data-animation="FadeIn">
+                                    <h5 class="font-weight-bolder text-green">{{__('Socials')}}</h5>
                                     <div class="multisteps-form__content">
                                         <div class="row mt-3">
                                             <div class="col-12">
-                                                <label>{{__('Twitter Handle')}}</label>
-                                                <input  name="twitter" class="multisteps-form__input form-control" type="text" @if(!empty($selected_user)) value="{{$selected_user->twitter}}" @endif />
+                                                <label class="text-white">{{__('Twitter Handle')}}</label>
+                                                <input  name="twitter" class="multisteps-form__input form-control bg-gray-700 text-white" type="text" @if(!empty($selected_user)) value="{{$selected_user->twitter}}" @endif />
                                             </div>
                                             <div class="col-12 mt-3">
-                                                <label>{{__('Facebook Account')}}</label>
-                                                <input name="facebook" class="multisteps-form__input form-control" type="text" @if(!empty($selected_user)) value="{{$selected_user->facebook}}" @endif />
+                                                <label class="text-white">{{__('Facebook Account')}}</label>
+                                                <input name="facebook" class="multisteps-form__input form-control bg-gray-700 text-white" type="text" @if(!empty($selected_user)) value="{{$selected_user->facebook}}" @endif />
                                             </div>
                                             <div class="col-12 mt-3">
-                                                <label>{{__('Linkedin Account')}}</label>
-                                                <input name="linkedin" class="multisteps-form__input form-control" @if(!empty($selected_user)) value="{{$selected_user->linkedin}}" @endif />
+                                                <label class="text-white">{{__('Linkedin Account')}}</label>
+                                                <input name="linkedin" class="multisteps-form__input form-control bg-gray-700 text-white" @if(!empty($selected_user)) value="{{$selected_user->linkedin}}" @endif />
                                             </div>
                                         </div>
 
@@ -106,7 +106,7 @@
                                     <input type="hidden" name="id" value="{{$selected_user->id}}">
                                 @endif
                                 <div class="button-row text-left mt-4">
-                                    <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="submit" title="Next">{{__('Submit')}}</button>
+                                    <button class="btn bg-gradient-success ms-auto mb-0 js-btn-next" type="submit" title="Next">{{__('Submit')}}</button>
                                 </div>
 
                             </form>
