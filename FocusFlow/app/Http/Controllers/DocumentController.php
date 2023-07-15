@@ -24,14 +24,6 @@ class DocumentController extends BaseController
 
     public function documentPost(Request $request)
     {
-
-        if(config('app.env') === 'demo')
-        {
-
-            return;
-
-        }
-
         $request->validate([
             'file'=>'required|mimes:jpeg,bmp,png,gif,svg,pdf'
         ]);
