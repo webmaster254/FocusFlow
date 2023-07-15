@@ -4,12 +4,30 @@ FocusFlow is a powerful productivity application designed to help individuals ac
 
 ## How t run the app
 1. Clone the project
+
 `Run git clone https://github.com/webmaster254/FocusFlow.git`
 
-2.run composer install
+2.Run composer install
 
 `Run composer install`
 
-3.
+3. Copy environment variable to .env and replace them with your database details
+
+   `Run cp .env.example .env`
+
+4. Generate key for the app
+
+   `Run php artisan key:generate`
+
+5. Migrate db
+`Run php artisan migrate`
+
+6. Run the app
+
+`Run php artisan serve`
+
+7. View your app
+
+   `Go to link localhost:8000`
 
 
